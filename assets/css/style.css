@@ -59,8 +59,47 @@ footer {
   padding: 2rem 1rem;
 }
 
-@media (max-width: 600px) {
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
   nav ul {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav ul.open {
+    display: flex;
   }
 }
